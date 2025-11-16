@@ -1,3 +1,14 @@
+<script setup>
+  import { SelectDirectory } from '../../wailsjs/go/filenavigator/FileNavigatorService'
+
+  async function load() {
+    const files = await SelectDirectory()
+    console.log(files)
+  }
+
+  load()
+</script>
+
 <template>
   <main class="tw-flex tw-flex-col tw-justify-between tw-items-center tw-h-screen background">
     <img
