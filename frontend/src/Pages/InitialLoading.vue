@@ -1,12 +1,16 @@
 <script setup>
-  import { SelectDirectory } from '../../wailsjs/go/filenavigator/FileNavigatorService'
+  import { useRouter } from 'vue-router'
 
-  async function load() {
-    const files = await SelectDirectory()
-    console.log(files)
+  const router = useRouter()
+
+  async function redirectToHome() {
+    setTimeout(
+      () => router.push({ path: '/home' }),
+      5000,
+    )
   }
 
-  load()
+  redirectToHome()
 </script>
 
 <template>

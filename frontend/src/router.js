@@ -1,9 +1,8 @@
 import { createMemoryHistory, createRouter } from 'vue-router'
 
-import InitialLoading from './components/InitialLoading.vue'
-
 const routes = [
-  { path: '/', component: InitialLoading },
+  { path: '/', component: () => import('./pages/InitialLoading.vue') },
+  { path: '/home', component: () => import('./pages/Home.vue') },
 ]
 
 export const router = createRouter({
