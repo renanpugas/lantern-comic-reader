@@ -1,5 +1,5 @@
 <script setup>
-  import { SelectDirectory } from '../../wailsjs/go/filenavigator/FileNavigatorService'
+  import { fileNavigatorStore } from '../store'
 
   const listItems = [
     {
@@ -12,7 +12,7 @@
   ]
 
   async function handleSelectDirectory() {
-    const files = await SelectDirectory()
+    const files = await fileNavigatorStore.selectDirectory()
     console.log(files)
   }
 </script>
