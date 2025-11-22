@@ -26,7 +26,7 @@
       <v-menu
         open-on-hover
       >
-        <template v-slot:activator="{ props }">
+        <template #activator="{ props }">
           <v-btn
             class="tw-text-base tw-font-medium tw-normal-case tw-tracking-tight"
             variant="text"
@@ -39,8 +39,8 @@
         <v-list>
           <v-list-item
             v-for="(item, index) in listItems"
-            class="tw-text-left"
             :key="index"
+            class="tw-text-left"
             :value="index"
           >
             <v-list-item-title
@@ -51,8 +51,7 @@
           </v-list-item>
         </v-list>
       </v-menu>
-      <v-spacer></v-spacer>
+      <v-spacer />
     </v-system-bar>
   </v-layout>
-
 </template>

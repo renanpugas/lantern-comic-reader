@@ -19,7 +19,7 @@
       class="tw-h-[256px] tw-mt-16"
       alt="Wails logo"
       src="../assets/images/logo.png"
-    />
+    >
 
     <v-progress-circular
       class="tw-mb-16"

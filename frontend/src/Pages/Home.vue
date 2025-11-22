@@ -1,5 +1,5 @@
 <script setup>
-  import SystemBar from '../components/SystemBar.vue';
+  import SystemBar from '../components/SystemBar.vue'
 
 </script>
 
