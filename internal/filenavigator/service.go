@@ -36,6 +36,27 @@ func (fn *FileNavigatorService) SelectDirectory() string {
 	return selectedDir
 }
 
+func (fn *FileNavigatorService) SelectFile() string {
+	selectedFile, err := runtime.OpenFileDialog(
+		fn.ctx,
+		runtime.OpenDialogOptions{
+			Title: "Selecione um arquivo",
+			Filters: []runtime.FileFilter{
+				{
+					DisplayName: "Comic Files",
+					Pattern:     "*.cbz;*.cbr",
+				},
+			},
+		},
+	)
+
+	if err != nil {
+		return ""
+	}
+
+	return selectedFile
+}
+
 func (fn *FileNavigatorService) ListFilesFromDirectory(directoryPath string) []string {
 	dirEntries, err := os.ReadDir(directoryPath)
 

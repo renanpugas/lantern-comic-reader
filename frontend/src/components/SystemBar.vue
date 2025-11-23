@@ -4,6 +4,7 @@
   const listItems = [
     {
       title: 'Abrir Arquivo',
+      handler: handleSelectFile,
     },
     {
       title: 'Abrir Pasta',
@@ -14,6 +15,11 @@
   async function handleSelectDirectory() {
     const files = await fileNavigatorStore.selectDirectory()
     console.log(files)
+  }
+
+  async function handleSelectFile() {
+    const file = await fileNavigatorStore.selectFile()
+    console.log(file)
   }
 </script>
 

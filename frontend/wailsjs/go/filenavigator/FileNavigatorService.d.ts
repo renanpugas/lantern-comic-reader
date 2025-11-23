@@ -6,4 +6,6 @@ export function ListFilesFromDirectory(arg1:string):Promise<Array<string>>;
 
 export function SelectDirectory():Promise<string>;
 
+export function SelectFile():Promise<string>;
+
 export function Startup(arg1:context.Context):Promise<void>;

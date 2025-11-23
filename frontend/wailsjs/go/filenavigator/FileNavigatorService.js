@@ -10,6 +10,10 @@ export function SelectDirectory() {
   return window['go']['filenavigator']['FileNavigatorService']['SelectDirectory']();
 }
 
+export function SelectFile() {
+  return window['go']['filenavigator']['FileNavigatorService']['SelectFile']();
+}
+
 export function Startup(arg1) {
   return window['go']['filenavigator']['FileNavigatorService']['Startup'](arg1);
 }
